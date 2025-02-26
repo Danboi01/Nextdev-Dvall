@@ -1,6 +1,5 @@
 RegisterNetEvent("elysium:dvall")
 AddEventHandler("elysium:dvall", function ()
-    Wait(15000)
     for vehicle in EnumerateVehicles() do
         if (not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1))) then 
             SetVehicleHasBeenOwnedByPlayer(vehicle, false) 
