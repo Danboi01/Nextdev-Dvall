@@ -2,7 +2,7 @@
 
 fx_version 'bodacious'
 game 'gta5'
-author 'Elysium Development'
+author 'Joey B @ Next Dev Labs'
 description 'Simple standalone dvall script'
 
 server_script {
