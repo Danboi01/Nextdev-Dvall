@@ -1,13 +1,16 @@
 RegisterNetEvent("elysium:dvall")
-AddEventHandler("elysium:dvall", function ()
-    for vehicle in EnumerateVehicles() do
-        if (not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1))) then 
-            SetVehicleHasBeenOwnedByPlayer(vehicle, false) 
-            SetEntityAsMissionEntity(vehicle, false, false) 
-            DeleteVehicle(vehicle)
-            if (DoesEntityExist(vehicle)) then 
-                DeleteVehicle(vehicle) 
+AddEventHandler(
+    "elysium:dvall",
+    function()
+        for vehicle in EnumerateVehicles() do
+            if (not IsPedAPlayer(GetPedInVehicleSeat(vehicle, -1))) then
+                SetVehicleHasBeenOwnedByPlayer(vehicle, false)
+                SetEntityAsMissionEntity(vehicle, false, false)
+                DeleteVehicle(vehicle)
+                if (DoesEntityExist(vehicle)) then
+                    DeleteVehicle(vehicle)
+                end
             end
         end
     end
-end)
+)
